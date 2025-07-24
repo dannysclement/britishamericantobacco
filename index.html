@@ -58,7 +58,7 @@
                 formData.append("file", file);
 
                 try {
-                    const response = await fetch("https://your-server-url.com/upload", { // Replace with your server URL
+                    const response = await fetch("http://localhost:3000/upload", { // Ensure this matches your server URL
                         method: "POST",
                         body: formData
                     });
