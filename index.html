@@ -58,7 +58,7 @@
                 formData.append("file", file);
 
                 try {
-                    const response = await fetch("http://localhost:3000/upload", { // Ensure this matches your server URL
+                    const response = await fetch("http://localhost:3000/upload", {
                         method: "POST",
                         body: formData
                     });
@@ -68,7 +68,7 @@
                     }
 
                     const data = await response.json();
-                    if (data.url) { // Assuming the server returns the image URL in the response
+                    if (data.url) {
                         const img = document.createElement("img");
                         img.src = data.url; // Use the URL returned from the server
                         output.innerHTML = ""; // Clear previous images
